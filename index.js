@@ -62,7 +62,8 @@ app.post('/signup', async (req, res) => {
     }
   }
   catch(error){
-    res.status(500).json({error:error})
+    console.log(error)
+    res.status(500).json({error:"Internal Server Error"})
   }
 });
 
@@ -90,7 +91,8 @@ app.post('/login', async (req, res) => {
     }
   }
   catch(error){
-    res.status(500).json({error:error})
+    console.log(error)
+    res.status(500).json({error:"Internal Server Error"})
   }
 });
 
@@ -110,7 +112,8 @@ app.post('/verify', async (req, res) => {
     }
   }
   catch(error){
-    res.status(500).json({error:error})
+    console.log(error)
+    res.status(500).json({error:"Internal Server Error"})
   }
 })
 
@@ -139,7 +142,8 @@ app.post('/deleteaccount', async (req, res) => {
     }
   }
   catch(error){
-    res.status(500).json({error:error})
+    console.log(error)
+    res.status(500).json({error:"Internal Server Error"})
   }
 })
 
@@ -178,8 +182,8 @@ async function StartServer(){
   if(!Data["Accounts"]){
     Data["Accounts"] = {}
   }
-  if(!Data["Counties"]){
-    Data["Counties"] = {}
+  if(!Data["States"]){
+    Data["States"] = {}
   }
 }
 
